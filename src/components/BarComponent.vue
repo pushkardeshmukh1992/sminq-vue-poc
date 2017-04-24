@@ -2,6 +2,9 @@
   <div>
     <bs-title :title="title"></bs-title>
     <h2>Bar view!!</h2>
+    <div class="image-container" v-for="item in items">
+      <img v-lazy="imgObj" alt="">
+    </div>
   </div>
 </template>
 
@@ -11,7 +14,19 @@ export default {
   data () {
     return {
       title: 'This is title for Bar View',
-      sources: []
+      sources: [],
+      items: [
+        '1', '1', '1', '1', '1',
+        '1', '1', '1', '1', '1',
+        '1', '1', '1', '1', '1',
+        '1', '1', '1', '1', '1',
+        '1', '1', '1', '1', '1'
+      ],
+      imgObj: {
+        src: 'http://lorempizza.com/380/240/pie',
+        error: 'http://placehold.it/380x240',
+        loading: 'http://placehold.it/380x240'
+      }
     }
   }
 }
