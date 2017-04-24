@@ -1,24 +1,18 @@
 <template>
   <div>
     <bs-title :title="title"></bs-title>
-    <h2>Foo view!!</h2>
+    <h2>Bar view!!</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FooComponent',
+  name: 'BarComponent',
   data () {
     return {
-      title: 'This is title for foo View',
+      title: 'This is title for Bar View',
       sources: []
     }
-  },
-  created: function () {
-    this.$http.get('http://staging.api.sminq.com:8080/v1/user/business/autocomplete?categoryId=1&cityId=1&searchText=asd', {headers: { Authorization: 'Basic YWRtaW46YWRtaW4=' }})
-      .then(response => {
-        this.sources = response.data.sources
-      })
   }
 }
 </script>

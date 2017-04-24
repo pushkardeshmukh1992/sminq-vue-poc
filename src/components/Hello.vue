@@ -1,5 +1,7 @@
 <template>
+
   <div class="hello">
+    <bs-title :title="title"></bs-title>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -25,7 +27,8 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      title: 'Welcome to home page'
     }
   }
 }
